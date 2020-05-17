@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Covid-19 Web App</title>
+<link rel="stylesheet" href="Covid.css"/>
+<style type="text/css">
+body{
+margin:0px;
+height:100%;
+width:100%;
+box-sizing:bordered-box;
+justify-content:center;
+
+font-family:Poppins;
+}
+input{
+border:none;
+outline:none;
+width:92% !important;
+height:3rem;
+margin-left:-1rem;
+}
+.sebtn{
+position:absolute;
+z-index:1;
+margin-left:0.7rem;
+height:3rem;
+}
+.worldhead{
+position:absolute ;
+z-index:1;
+margin-left:1.7rem;
+
+
+font-size:1.2rem;
+}
+
+.sh1{
+box-shadow:5px 5px 5px 0px lightpink;
+color:#FF69B4;
+background: linear-gradient(to bottom, #ffc0cb 0%, #ffffff 103%);
+}
+.sh2{
+box-shadow:3px 3px 4px 4px #ceffca;
+color:#ceffca;
+background: linear-gradient(to bottom, #ceffca 0%, #ffffff 103%);
+}
+.sh3{
+box-shadow:5px 5px 5px 2px #FFFACD;
+color:#FFFACD;
+background: linear-gradient(to bottom, #FFFACD 0%, #ffffff 103%);
+}
+.dpurple{
+position:absolute;
+z-index:1;
+background:transparent;
+margin-left:1rem;
+margin-top:-.5rem !important;
+
+}
+.in{
+margin-top:2rem;
+}
+.ecount{
+space-between:1rem;
+margin-left:0.4rem;
+font-size:1.5rem;
+}
+canvas {
+   background-color:white;
+}
+img{
+height:2rem;
+width:2rem;
+margin-left:6rem;
+margin-top:-3.2rem;
+}
+.mosti{
+margin-bottom:17rem !important;
+height:90%;
+}
+.world{
+
+}
+.w3{
+width:40.3%;
+float:left;
+}
+.sh{
+background:linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%);
+box-shadow:3px 3px 5px 5px #e6e6fa;
+}
+.m{
+position:absolute ;
+z-index:1;
+margin-top:22rem;
+margin-left:-22rem;
+font-size:1.2rem;
+}
+.infected{
+margin-top:25rem;
+width:90%;
+
+
+}
+.flag{
+height:3rem;
+width:3rem;
+margin-left:0.5rem;
+margin-top:0rem;
+border-radius:5%;
+}
+.infn{
+position:absolute;
+margin-left:2rem;
+margin-top:0.3rem !important;
+}
+.lab{
+position:absolute;
+margin-top:1.9rem;
+margin-left:1.8rem;
+}
+.lab2{
+position:absolute;
+margin-top:1.9rem;
+margin-left:6.7rem;
+}
+.infn2{
+position:absolute;
+margin-left:7rem;
+margin-top:0.3rem !important;
+}
+.lab3{
+position:absolute;
+margin-top:1.9rem;
+margin-left:10.7rem;
+}
+.infn3{
+position:absolute;
+margin-left:10.9rem;
+margin-top:0.3rem !important;
+}
+.lab4{
+position:absolute;
+margin-top:1.9rem;
+margin-left:15rem;
+}
+.infn4{
+position:absolute;
+margin-left:15rem;
+margin-top:0.3rem !important;
+}
+
+
+</style>
+</head>
+<body class="w3-white">
+<!--SearchBar-->
+<div>
+<div class="w3-padding w3-text-light-grey w3-margin search bar">
+<input class="w3-text-grey w3-light-grey w3-card w3-padding w3-round-large " type="text" placeholder="Search"/>
+<button  class=" w3-round-large sebtn w3-button w3-flat-midnight-blue">
+<i class="fa fa-search"></i>
+</button>
+</div>
+</div>
+<!--EndSearchBar-->
+
+<!--World-->
+
+<!--WorldInfect--><b>
+<label class="worldhead ">WORLD UPDATE</label><br>
+
+<div  class="w3 sh w3-text-deep-purple w3-padding w3-margin w3-card-4 w3-round-xlarge ">
+
+<br><label class="w3-card w3-small w3-padding w3-round-xlarge light">+15,284</label>
+<img src="https://lh3.googleusercontent.com/-Poq8jRy6LlA/XsBIvJ-1fgI/AAAAAAAAAQA/W4JffLlHH54aaIfLNAJ2Bvv7Le7fbdIsgCLcBGAsYHQ/h240/business.png"/>
+<br><label class="ecount"><b>1,288,080</b></label>
+<label class=" ecount in w3-small w3-text-grey"><b>TOTAL INFECTIONS</b></label>
+</div>
+<!--EndWorldInfect-->
+<div class="w3 sh1  w3-padding w3-margin w3-card-4 w3-round-xlarge ">
+<br><label class="w3-card w3-small w3-padding w3-round-xlarge w3-text-pink light">+14,44</label>
+<img src="https://lh3.googleusercontent.com/-M3IyGtvWpco/XsBMB6THVoI/AAAAAAAAAQs/MbZP5K1LxicpXgm2n6ySY_syQPh61n3HQCPcBGAYYCw/w280-h280-p/virus%2B%25281%2529.png"/>
+<br><label class="ecount"><b>70,567</b></label>
+<label class=" ecount in w3-small w3-text-grey"><b>TOTAL DEATHS</b></label>
+</div>
+
+
+<div class="w3 sh2  w3-padding w3-margin w3-card-4 w3-round-xlarge ">
+<br><label class="w3-card w3-small w3-padding w3-round-xlarge w3-text-green light">+1000</label>
+<img class="sh2i" src="https://lh3.googleusercontent.com/-rviUqtrDQX4/XsBMBkhs2qI/AAAAAAAAAQk/ytdStzmwX9kkgktJtIxIg0k5yZ0mnWQCACPcBGAYYCw/w280-h280-p/gym.png"/>
+<br><label class="w3-text-green ecount"><b>272,009</b></label>
+<label class=" ecount in w3-small w3-text-grey"><b>RECOVERS</b></label>
+</div>
+
+<div class="w3  sh3  w3-padding w3-margin w3-card-4 w3-round-xlarge ">
+<br><label class="w3-card w3-small w3-padding w3-round-xlarge w3-text-yellow light">+1453</label>
+<img class="sh2i" src="https://lh3.googleusercontent.com/-juAlUIS56fw/XsBMBj9UE_I/AAAAAAAAAQo/vczk0YXpqLwfUkzTS2RNMWJd9LsBT1yRQCPcBGAYYCw/w280-h280-p/timer.png"/>
+<br><label class="w3-text-yellow ecount"><b>46,058</b></label>
+<label class=" ecount in w3-small w3-text-grey"><b>CRITICAL</b></label>
+</div>
+</b>
+<br>
+<label class="m"><b>MOST INFECTED</b></label>
+
+<div class="infected">
+
+<div class="w3-margin  w3-round-large w3-bar">
+<img class="flag w3-round-xlarge" src="https://img.icons8.com/color/2x/india.png"/>
+<label class="infn w3-text-deep-purple w3-large"><b>135k</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label class="infn2 w3-text-red w3-large"><b>13k</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label class="infn3 w3-text-green w3-large"><b>24k</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label class="infn4 w3-text-yellow w3-large"><b>16k</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+<div class="w3-margin w3-card-4 w3-round-large w3-bar">
+<img class="flag w3-round-xlarge" src="https://img.icons8.com/color/2x/usa.png"/>
+<label class="infn w3-text-deep-purple w3-large"><b>60k</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label class="infn2 w3-text-red w3-large"><b>4k</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label class="infn3 w3-text-green w3-large"><b>24k</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label class="infn4 w3-text-yellow w3-large"><b>6k</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+<div class="w3-margin infec  w3-round-xlarge w3-ar">
+<img class="flag w3-round-large" src="https://lh3.googleusercontent.com/-vTEFJy6XJ_o/XsDzEDYlizI/AAAAAAAAAQ4/idY7hnXWp6oXAZxBDLGQW93vJpsnzaM_gCLcBGAsYHQ/h240/world.png"/>
+<label class="infn w3-text-deep-purple w3-large"><b>100k</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label class="infn2 w3-text-red w3-large"><b>2k</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label class="infn3 w3-text-green w3-large"><b>22k</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label class="infn4 w3-text-yellow w3-large"><b>7k</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+
+</div>
+</body>
+</html>
