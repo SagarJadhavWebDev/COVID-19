@@ -1,0 +1,147 @@
+body{
+margin:0px;
+height:100%;
+width:100%;
+box-sizing:bordered-box;
+justify-content:center;
+
+font-family:Poppins;
+}
+input{
+border:none;
+outline:none;
+width:92% !important;
+height:3rem;
+margin-left:-1rem;
+}
+.sebtn{
+position:absolute;
+z-index:1;
+margin-left:0.7rem;
+height:3rem;
+}
+.worldhead{
+position:absolute ;
+z-index:1;
+margin-left:1.7rem;
+
+
+font-size:1.2rem;
+}
+
+.sh1{
+box-shadow:5px 5px 5px 0px lightpink;
+color:#FF69B4;
+background: linear-gradient(to bottom, #ffc0cb 0%, #ffffff 103%);
+}
+.sh2{
+box-shadow:3px 3px 4px 4px #ceffca;
+color:#ceffca;
+background: linear-gradient(to bottom, #ceffca 0%, #ffffff 103%);
+}
+.sh3{
+box-shadow:5px 5px 5px 2px #FFFACD;
+color:#FFFACD;
+background: linear-gradient(to bottom, #FFFACD 0%, #ffffff 103%);
+}
+.dpurple{
+position:absolute;
+z-index:1;
+background:transparent;
+margin-left:1rem;
+margin-top:-.5rem !important;
+
+}
+.in{
+margin-top:2rem;
+}
+.ecount{
+space-between:1rem;
+margin-left:0.4rem;
+font-size:1.5rem;
+}
+canvas {
+   background-color:white;
+}
+img{
+height:2rem;
+width:2rem;
+margin-left:6rem;
+margin-top:-3.2rem;
+}
+.mosti{
+margin-bottom:17rem !important;
+height:90%;
+}
+.world{
+
+}
+.w3{
+width:40.3%;
+float:left;
+}
+.sh{
+background:linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%);
+box-shadow:3px 3px 5px 5px #e6e6fa;
+}
+.m{
+position:absolute ;
+z-index:1;
+margin-top:22rem;
+margin-left:-22rem;
+font-size:1.2rem;
+}
+.infected{
+margin-top:25rem;
+width:90%;
+
+
+}
+.flag{
+height:3rem;
+width:3rem;
+margin-left:0.5rem;
+margin-top:0rem;
+border-radius:5%;
+}
+.infn{
+position:absolute;
+margin-left:2rem;
+margin-top:0.3rem !important;
+}
+.lab{
+position:absolute;
+margin-top:1.9rem;
+margin-left:1.8rem;
+}
+.lab2{
+position:absolute;
+margin-top:1.9rem;
+margin-left:6.7rem;
+}
+.infn2{
+position:absolute;
+margin-left:7rem;
+margin-top:0.3rem !important;
+}
+.lab3{
+position:absolute;
+margin-top:1.9rem;
+margin-left:10.7rem;
+}
+.infn3{
+position:absolute;
+margin-left:10.9rem;
+margin-top:0.3rem !important;
+}
+.lab4{
+position:absolute;
+margin-top:1.9rem;
+margin-left:15rem;
+}
+.infn4{
+position:absolute;
+margin-left:15rem;
+margin-top:0.3rem !important;
+}
+
