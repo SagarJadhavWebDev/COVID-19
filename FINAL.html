@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<!-- or -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Covid-19 Web App</title>
+<link rel="stylesheet" href="Covid.css"/>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+
+var BRZ ={
+"url":"https://coronavirus-19-api.herokuapp.com/countries/Brazil",
+"method":"GET",
+"timeout":1000,
+};
+
+var SP ={
+"url":"https://coronavirus-19-api.herokuapp.com/countries/Spain",
+"method":"GET",
+"timeout":1000,
+};
+
+var Russia ={
+"url":"https://coronavirus-19-api.herokuapp.com/countries/Russia",
+"method":"GET",
+"timeout":1000,
+};
+
+var USA ={
+"url":"https://coronavirus-19-api.herokuapp.com/countries/USA",
+"method":"GET",
+"timeout":1000,
+
+};
+
+
+var India ={
+"url":"https://coronavirus-19-api.herokuapp.com/countries/India",
+"method":"GET",
+"timeout":1000,
+
+};
+
+
+var added = {
+"url":"https://api.covid19api.com/summary",
+"method":"GET",
+"timeout":1000,
+};
+
+var settings = {
+  "url": "https://coronavirus-19-api.herokuapp.com/all",
+  "method": "GET",
+  "timeout": 1000,
+};
+
+var critical = {
+  "url": "https://coronavirus-19-api.herokuapp.com/countries/world",
+  "method": "GET",
+  "timeout": 1000,
+};
+
+$.ajax(critical).done(function(Cres){
+ let critical = Cres.critical;
+ let addcric = Cres.casesPerOneMillion;
+  $('#tcritical').text(critical);
+  $('#ncritical').text('+ ' + addcric);
+});
+
+
+
+$.ajax(settings).done(function (Response) {
+ let total = Response.cases;
+ let death = Response.deaths;
+ let recover = Response.recovered;
+
+
+ 
+ $("#tadd").text(+ total);
+ $("#tdeath").text(death);
+ $('#trecover').text(recover);
+
+ 
+  
+ 
+
+
+ 
+ 
+ 
+});
+
+$.ajax(added).done(function(Res){
+
+let Tadd = Res.Global.NewConfirmed;
+let NDeath = Res.Global.NewDeaths;
+let NR = Res.Global.NewRecovered;
+
+ $("#nadd").text('+ ' + Tadd);
+  $("#ndeath").text('+ ' + NDeath);
+   $("#nrecover").text('+ ' + NR);
+ 
+
+});
+
+$.ajax(India).done(function(IRes){
+
+let IT = IRes.cases;
+let ID = IRes.deaths;
+let IR = IRes.recovered;
+let IC = IRes.critical;
+
+
+if (IT >= 1000 || ID >=1000 || IR >=1000 || IC >= 1000) {
+        k = (IT / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        kd = (ID / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        kr = (IR / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        kc = (IC / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+
+            $("#INDI").text(k);
+            $("#INDD").text(kd);
+            $("#INDR").text(kr);
+            $("#INDC").text(kc);
+             
+         
+     }
+
+
+
+});
+
+$.ajax(USA).done(function(USARes){
+
+let USAT = USARes.cases;
+let USAD = USARes.deaths;
+let USAR = USARes.recovered;
+let USAC = USARes.critical;
+
+
+if (USAT >= 1000 || USAD >=1000 || USAR >=1000 || USAC >= 1000) {
+        USAk = (USAT / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        USAkd = (USAD / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        USAkr = (USAR / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        USAkc = (USAC / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+
+            $("#USAI").text(USAk);
+            $("#USAD").text(USAkd);
+            $("#USAR").text(USAkr);
+            $("#USAC").text(USAkc);
+             
+         
+     }
+
+
+
+});
+
+$.ajax(Russia).done(function (Russ) {
+ let Rust = Russ.cases;
+ let Rusd = Russ.deaths;
+ let Rusr = Russ.recovered;
+ let Rusc = Russ.critical;
+
+ 
+if (Rust >= 1000 || Rusd >=1000 || Rusr >=1000 || Rusc >= 1000) {
+        k = (Rust / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        kd = (Rusd / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        kr = (Rusr / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        kc = (Rusc / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+
+            $("#RuI").text(k);
+            $("#RuD").text(kd);
+            $("#RuR").text(kr);
+            $("#RuC").text(kc);
+             
+         
+     }
+});
+
+$.ajax(SP).done(function (SPN) {
+ let SPNt = SPN.cases;
+ let SPNd = SPN.deaths;
+ let SPNr = SPN.recovered;
+ let SPNc = SPN.critical;
+
+ 
+if (SPNt >= 1000 || SPNd >=1000 || SPNr >=1000 || SPNc >= 1000) {
+        Sk = (SPNt / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        Skd = (SPNd / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        Skr = (SPNr / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        Skc = (SPNc / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+
+            $("#SPI").text(Sk);
+            $("#SPD").text(Skd);
+            $("#SPR").text(Skr);
+            $("#SPC").text(Skc);
+             
+         
+     }
+});
+
+$.ajax(BRZ).done(function (BRZ) {
+ let BRZt = BRZ.cases;
+ let BRZd = BRZ.deaths;
+ let BRZr = BRZ.recovered;
+ let BRZc = BRZ.critical;
+
+ 
+if (BRZt >= 1000 || BRZd >=1000 || BRZr >=1000 || BRZc >= 1000) {
+        BRk = (BRZt / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        BRd = (BRZd / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        BRr = (BRZr / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+        BRc = (BRZc / 1000).toFixed(0).replace(/\.0$/, '') + 'K';
+
+            $("#BRI").text(BRk);
+            $("#BRD").text(BRd);
+            $("#BRR").text(BRr);
+            $("#BRC").text(BRc);
+             
+         
+     }
+});
+
+
+});
+
+
+
+
+
+
+
+</script>
+<style type="text/css">
+body{
+margin:0px;
+height:100%;
+width:100%;
+box-sizing:bordered-box;
+justify-content:center;
+
+font-family:Poppins;
+}
+input{
+border:none;
+outline:none;
+width:92% !important;
+height:3rem;
+margin-left:-1rem;
+}
+.sebtn{
+position:absolute;
+z-index:1;
+margin-left:0.7rem;
+height:3rem;
+}
+.worldhead{
+position:absolute ;
+z-index:1;
+margin-left:1.7rem;
+
+
+font-size:1.2rem;
+}
+
+.sh1{
+
+color:#FF69B4;
+background: linear-gradient(to bottom, #ffe7e7 0%, #ffffff 103%);
+}
+.sh2{
+
+color:#ceffca;
+background: linear-gradient(to bottom, #ceffca 0%, #ffffff 103%);
+}
+.sh3{
+
+color:#FFFACD;
+background: linear-gradient(to bottom, #FFFACD 0%, #ffffff 103%);
+}
+.dpurple{
+position:absolute;
+z-index:1;
+background:transparent;
+margin-left:1rem;
+margin-top:-.5rem !important;
+
+}
+.in{
+margin-top:2rem;
+}
+.ecount{
+space-between:1rem;
+margin-left:0.4rem;
+font-size:1.5rem;
+}
+canvas {
+   background-color:white;
+}
+img{
+height:2rem;
+width:2rem;
+margin-left:6rem;
+margin-top:-3.2rem;
+}
+.mosti{
+margin-bottom:17rem !important;
+height:90%;
+}
+.world{
+
+}
+.w3{
+width:41%;
+float:left;
+}
+.sh{
+background:linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%);
+
+}
+.m{
+position:absolute ;
+z-index:1;
+margin-top:22rem;
+margin-left:-22rem;
+font-size:1.2rem;
+}
+.infected{
+margin-top:25rem;
+width:90%;
+
+
+}
+.flag{
+height:3rem;
+width:3rem;
+margin-left:0.5rem;
+margin-top:0rem;
+border-radius:5%;
+}
+.infn{
+position:absolute;
+margin-left:2rem;
+margin-top:0.3rem !important;
+}
+.lab{
+position:absolute;
+margin-top:1.9rem;
+margin-left:1.8rem;
+}
+.lab2{
+position:absolute;
+margin-top:1.9rem;
+margin-left:6.7rem;
+}
+.infn2{
+position:absolute;
+margin-left:7rem;
+margin-top:0.3rem !important;
+}
+.lab3{
+position:absolute;
+margin-top:1.9rem;
+margin-left:10.7rem;
+}
+.infn3{
+position:absolute;
+margin-left:10.9rem;
+margin-top:0.3rem !important;
+}
+.lab4{
+position:absolute;
+margin-top:1.9rem;
+margin-left:15rem;
+}
+.infn4{
+position:absolute;
+margin-left:15rem;
+margin-top:0.3rem !important;
+}
+
+
+</style>
+</head>
+<body class="w3-white" onload="">
+<!--SearchBar-->
+<div>
+<div class="w3-padding w3-text-light-grey w3-margin search bar">
+<input class="w3-text-grey w3-light-grey w3-card w3-padding w3-round-large " type="text" placeholder="Search"/>
+<button  class=" w3-round-large sebtn w3-button w3-flat-midnight-blue">
+<i class="fa fa-search"></i>
+</button>
+</div>
+</div>
+<!--EndSearchBar-->
+
+<!--World-->
+
+<!--WorldInfect--><b>
+<label class="worldhead ">WORLD UPDATE</label><br>
+
+<div  class="w3 sh w3-text-deep-purple w3-padding w3-margin  w3-round-xlarge ">
+
+<br><label id="nadd" class="w3-card w3-small w3-padding w3-round-xlarge light">Loading</label>
+<img src="https://lh3.googleusercontent.com/-Poq8jRy6LlA/XsBIvJ-1fgI/AAAAAAAAAQA/W4JffLlHH54aaIfLNAJ2Bvv7Le7fbdIsgCLcBGAsYHQ/h240/business.png"/>
+<br><label id="tadd" class="ecount"><b>Loading</b></label>
+<label class=" ecount in w3-small w3-text-grey"><b>TOTAL INFECTIONS</b></label>
+</div>
+<!--EndWorldInfect-->
+<div class="w3 sh1  w3-padding w3-margin  w3-round-xlarge ">
+<br><label id="ndeath" class="w3-card w3-small w3-padding w3-round-xlarge w3-text-red light">Loading</label>
+<img src="https://lh3.googleusercontent.com/-M3IyGtvWpco/XsBMB6THVoI/AAAAAAAAAQs/MbZP5K1LxicpXgm2n6ySY_syQPh61n3HQCPcBGAYYCw/w280-h280-p/virus%2B%25281%2529.png"/>
+<br><label id="tdeath" class="w3-text-red ecount"><b>Loading</b></label>
+<label class=" ecount in w3-small w3-text-grey"><b>TOTAL DEATHS</b></label>
+</div>
+
+
+<div class="w3 sh2  w3-padding w3-margin  w3-round-xlarge ">
+<br><label id="nrecover" class="w3-card w3-small w3-padding w3-round-xlarge w3-text-green light">Loading</label>
+<img class="sh2i" src="https://lh3.googleusercontent.com/-rviUqtrDQX4/XsBMBkhs2qI/AAAAAAAAAQk/ytdStzmwX9kkgktJtIxIg0k5yZ0mnWQCACPcBGAYYCw/w280-h280-p/gym.png"/>
+<br><label id="trecover" class="w3-text-green ecount"><b>Loading</b></label>
+<label class=" ecount in w3-small w3-text-grey"><b>TOTAL RECOVERS</b></label>
+</div>
+
+<div class="w3  sh3  w3-padding w3-margin  w3-round-xlarge ">
+<br><label id="ncritical" class="w3-card w3-small w3-padding w3-round-xlarge w3-text-yellow light">NANA</label>
+<img class="sh2i" src="https://lh3.googleusercontent.com/-juAlUIS56fw/XsBMBj9UE_I/AAAAAAAAAQo/vczk0YXpqLwfUkzTS2RNMWJd9LsBT1yRQCPcBGAYYCw/w280-h280-p/timer.png"/>
+<br><label id="tcritical" class="w3-text-yellow ecount"><b>Loading</b></label>
+<label class=" ecount in w3-small w3-text-grey"><br>TOTAL CRITICAL</b></label>
+</div>
+</b>
+<br>
+<label class="m"><b>MOST INFECTED</b></label>
+
+<div class="infected">
+
+<div  class="w3-margin    w3-round-large w3-bar">
+<img class="flag w3-round-xlarge" src="https://image.flaticon.com/icons/svg/206/206626.svg"/>
+<label id="USAI" class="infn w3-text-deep-purple w3-large"><b>Loading</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label id="USAD" class="infn2 w3-text-red w3-large"><b>Loading</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label id="USAR" class="infn3 w3-text-green w3-large"><b>Loading</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label id="USAC" class="infn4 w3-text-yellow w3-large"><b>Loading</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+<div  class="w3-margin w3-card-4   w3-round-large w3-bar">
+<img class="flag w3-round-xlarge" src="https://image.flaticon.com/icons/svg/555/555451.svg"/>
+<label id="RuI" class="infn w3-text-deep-purple w3-large"><b>Loading</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label id="RuD" class="infn2 w3-text-red w3-large"><b>Loading</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label id="RuR" class="infn3 w3-text-green w3-large"><b>Loading</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label id="RuC" class="infn4 w3-text-yellow w3-large"><b>Loading</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+<div  class="w3-margin   w3-round-large w3-bar">
+<img class="flag w3-round-xlarge" src="https://image.flaticon.com/icons/svg/321/321260.svg"/>
+<label id="SPI" class="infn w3-text-deep-purple w3-large"><b>Loading</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label id="SPD" class="infn2 w3-text-red w3-large"><b>Loading</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label id="SPR" class="infn3 w3-text-green w3-large"><b>Loading</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label id="SPC" class="infn4 w3-text-yellow w3-large"><b>Loading</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+<div  class="w3-margin w3-card-4   w3-round-large w3-bar">
+<img class="flag w3-round-xlarge" src="https://image.flaticon.com/icons/svg/630/630591.svg"/>
+<label id="BRI" class="infn w3-text-deep-purple w3-large"><b>Loading</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label id="BRD" class="infn2 w3-text-red w3-large"><b>Loading</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label id="BRR" class="infn3 w3-text-green w3-large"><b>Loading</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label id="BRC" class="infn4 w3-text-yellow w3-large"><b>Loading</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+<div  class="w3-margin   w3-round-large w3-bar">
+<img class="flag w3-round-xlarge" src="https://img.icons8.com/color/2x/india.png"/>
+<label id="INDI" class="infn w3-text-deep-purple w3-large"><b>Loading</label>
+<label class=" lab w3-tiny w3-text-grey">infections</label>
+<label id="INDD" class="infn2 w3-text-red w3-large"><b>Loading</label>
+<label class=" lab2 w3-tiny w3-text-grey">Deaths</label>
+<label id="INDR" class="infn3 w3-text-green w3-large"><b>Loading</label>
+<label class=" lab3 w3-tiny w3-text-grey">Recover</label>
+<label id="INDC" class="infn4 w3-text-yellow w3-large"><b>Loading</label>
+<label class=" lab4 w3-tiny w3-text-grey">critical</label>
+</div>
+
+
+
+</div>
+
+</body>
+</html>
+
