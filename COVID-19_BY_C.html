@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COVID-19 By COUNTRY</title>
+<style type="text/css">
+body{
+margin:0px;
+height:100%;
+width:100%;
+box-sizing:bordered-box;
+justify-content:center;
+trasition:1s;
+font-family:Poppins;
+}
+img{
+border-radius:5rem;
+height:3rem;
+width:3rem;
+
+}
+.flagn{
+margin-top:1rem;
+font-size:2rem;
+}
+.graphi{
+width:1rem;
+height:1rem;
+float:left;
+margin-left:-1rem;
+}
+.la{
+position: absolute;
+margin-left:0.7rem;
+margin-top:0rem !important;
+}
+.graphi1{
+width:1rem;
+height:1rem;
+float:left;
+margin-left:7rem;
+}
+.la1{
+position: absolute;
+margin-left:0.8rem;
+margin-top:0rem !important;
+}
+.graphi3{
+width:1rem;
+height:1rem;
+float:left;
+margin-left:7.5rem;
+}
+.la2{
+position: absolute;
+margin-left:0.5rem;
+margin-top:0rem !important;
+}
+.w3{
+width:40%;
+height:10rem !important;
+float:left;
+background:linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%);
+}
+.flagt{
+
+}
+.infn{
+position:absolute;
+margin-left:2rem;
+margin-top:0.3rem !important;
+}
+.lab{
+position:absolute;
+margin-top:2rem !important;
+margin-left:1.6rem;
+}
+.lab2{
+position:absolute;
+margin-top:2rem !important;
+margin-left:6.7rem;
+}
+.infn2{
+position:absolute;
+margin-left:7rem;
+margin-top:0.5rem !important;
+}
+.lab3{
+position:absolute;
+margin-top:1.9rem;
+margin-left:10.5rem;
+}
+.m{
+position:absolute ;
+z-index:1;
+margin-top:22rem;
+margin-left:-22rem;
+font-size:1.2rem;
+}
+.infn3{
+position:absolute;
+margin-left:10.9rem;
+margin-top:0.3rem !important;
+}
+.lab4{
+position:absolute;
+margin-top:1.9rem;
+margin-left:15rem;
+}
+.infn4{
+position:absolute;
+margin-left:15rem;
+margin-top:0.3rem !important;
+}
+@keyframes pulse {
+    0% {
+     transform: scale(1, 1);
+    }
+
+    50% {
+     transform: scale(1.1, 1.1);
+    }
+
+    100% {
+    transform: scale(1, 1);
+    }
+}
+.h{
+    animation: pulse 1s linear infinite;
+}
+.infected{
+margin-top:25rem;
+width:90%;
+
+
+}
+.im{
+height:2rem;
+width:2rem;
+margin-left:6rem;
+margin-top:-3.2rem;
+}
+.y{
+color:#FEDE00;
+}
+.lb{
+margin-top:-1rem !important;
+}
+.sh{
+background: linear-gradient(to bottom, #ffe7e7 0%, #ffffff 103%);
+}
+.sh1{
+background: linear-gradient(to bottom, #ceffca 0%, #ffffff 103%);
+}
+.sh2{
+background: linear-gradient(to bottom, #FFFACD 0%, #ffffff 103%);
+}
+.inf{
+margin-top:-1rem !important;
+}
+
+.Na 
+{
+    text-transform:uppercase;
+}
+.pi{
+height:3;
+width:3rem;
+
+
+}
+.pt{
+justify-content: center;
+margin-left:4rem;
+display:flex;
+}
+.what {
+    position: fixed;
+    bottom: 1em;
+    right: 2rem;
+    font-size:4rem;
+    text-decoration: none;
+    padding:1rem;
+    height:3.5rem;
+    width:3.5rem;
+
+
+}
+
+</style>
+</head>
+<body class="w3-animate-bottom">
+
+
+<center>
+<br>
+<label class="flagn w3-padding w3-margin w3-medium  w3-round-large w3-card"><b>COVID-19 LIVE DATA <b class="Na w3-text-blue"></b></label>
+</center>
+<b>
+<div class="w3-bar gi w3-padding w3-margin">
+<div class="w3-pink w3-round graphi"></div>
+<label class="la w3-small">New Deaths</label>
+<div class="w3-deep-purple w3-round graphi1">
+</div><label class="w3-small la1">New Cases</label>
+<div class="w3-yellow w3-round graphi3"></div>
+<label class="la2 w3-small">Critical</label>
+</div>
+</b>
+<div class="w3  w3-text-deep-purple   w3-padding w3-margin  w3-round-xlarge ">
+<br><center><b>
+<i class="fas ic w3-xxxlarge fa-virus"></i><br>
+<label class=" IT w3-xlarge"><i class="fa fa-spinner fa-spin"></i></label><br>
+<label class="w3-small w3-text-grey lb">Infections</label>
+</b>
+</div>
+<div class="w3 sh w3-text-pink   w3-padding w3-margin  w3-round-xlarge ">
+<br><center><b>
+<i class="fas w3-xxxlarge fa-skull-crossbones"></i><br>
+<label class=" ID w3-xlarge"><i class="fa fa-spinner fa-spin"></i></label><br>
+<label class="w3-small w3-text-grey lb">Deaths</label>
+</b>
+</div>
+
+<div class="w3 sh1 w3-text-green   w3-padding w3-margin  w3-round-xlarge ">
+<br><center><b>
+<i class="fas w3-xxxlarge fa-heart"></i><br>
+<label class=" IR w3-xlarge"><i class="fa fa-spinner fa-spin"></i></label><br>
+<label class="w3-small w3-text-grey lb">Recoveries</label>
+</b>
+</div>
+
+<div class="w3 sh2 y   w3-padding w3-margin  w3-round-xlarge ">
+<br><center><b>
+<i class="fas w3-xxxlarge fa-heartbeat"></i><br>
+<label class=" IC w3-xlarge"><i class="fa fa-spinner fa-plus"></i></label><br>
+<label class="w3-small w3-text-grey lb">Critical</label>
+</b>
+</div>
+
+<br><br>
+<label class="m"><b>PREVENTION GUIDE</b></label>
+
+
+<div class="infected">
+
+<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<img align="left" class="pi" src="https://www.flaticon.com/premium-icon/icons/svg/2841/2841222.svg">
+<label class="w3-medium pt ">Handwashing is the key to preventing Coronavirus.</label>
+
+</div>
+
+<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<img align="left" class="pi" src="https://image.flaticon.com/icons/svg/2949/2949689.svg">
+<label class="w3-medium pt ">Maintain 2-metre distance between you and people.</label>
+
+</div>
+
+<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<img align="left" class="pi" src="https://image.flaticon.com/icons/svg/2949/2949699.svg">
+<label class="w3-medium pt ">Cover your mouth and nose when coughing or sneezing.</label>
+
+</div>
+<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<img align="left" class="pi" src="https://image.flaticon.com/icons/svg/2756/2756493.svg">
+<label class="w3-medium pt "> Follow Stay home Stay Safe, Stay home if you feel unwell.</label>
+
+</div>
+</b></b></b></b></b></b></b></b></b></b></b>
+
+
+</div>
+<img class="what w3-dark-grey w3-round-xxlarge" src="https://image.flaticon.com/icons/png/512/875/875627.png">
+<footer class="footer w3-small w3-black ">
+<div class=""><b><br><center>
+<label>Design by <a class="w3-text-blue" href="https://www.freebielobster.com/"><b style="font-size:0.9rem;">Freebielobster.com</b></a></label><br>
+<label>Code with <i class=" w3-large h w3-text-red fa fa-heartbeat"></i> By <a class="w3-text-blue" href="https://www.linkedin.com/in/sagar-jadhav-25181a1a0"><b style="font-size:0.9rem">Sagar.J</b></a></label>
+</div></b>
+</footer>
+
+<script type="text/javascript">
+
+$( document ).ready(function() {
+let N = localStorage.getItem("storageName")
+let State;
+State = "https://coronavirus-19-api.herokuapp.com/countries/" + N;
+var India ={
+"url":State,
+"method":"GET",
+"timeout":5000,
+
+};
+
+
+$.ajax(India).done(function(IRes){
+console.log(JSON.stringify(IRes));
+let IT = IRes.cases;
+let ID = IRes.deaths;
+let IR = IRes.recovered;
+let IC = IRes.critical;
+let Na = IRes.country;
+
+
+$(".Na").text(Na);
+$(".IT").text(IT);
+$(".ID").text(ID);
+$('.IR').text(IR);
+$('.IC').text(IC);
+
+
+
+
+});
+});
+</script>
+
+
+</body>
+</html>
