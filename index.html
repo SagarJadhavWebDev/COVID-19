@@ -471,7 +471,7 @@ outline:none;
 <!--SearchBar-->
 <div>
 <div class="w3-padding w3-text-light-grey w3-margin search bar">
-<input id="myInput" class="w3-text-grey w3-light-grey w3-card w3-padding w3-round-large " type="text" placeholder="Search"/>
+<input id="myInput" class="w3-text-grey w3-light-grey w3-card w3-padding w3-round-large " type="text" placeholder="Search by Countries"/>
 <button  class=" w3-hover-blue w3-round-large sebtn w3-button w3-flat-midnight-blue">
 <i class="fa fa-search"></i>
 </button>
@@ -630,7 +630,7 @@ $.ajax({
 $("li").click(function() {
  ClickC = $(this).text();
  localStorage.setItem("storageName",ClickC)
- document.location.href = "COVID-19_BY_C.html";
+ document.location.href = "COVID-19-TRACKER-BY-COUNTRY.htm";
 
 });
 
