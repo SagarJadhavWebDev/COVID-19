@@ -18,13 +18,13 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-flat.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Covid-19 Tracker Made By Sagar.j </title>
+<title>Covid-19 Tracker Made By Sagar.j Hi friends i have credited this COVID-19 WORLD TRACKER do check out  , I would like to get feedback from You And do Share this Link with your friends & whatsapp groups Thank You.. </title>
 <link rel="stylesheet" href="Covid.css"/>
 
 <script type="text/javascript">
 
 $( document ).ready(function() {
-localStorage.removeItem("storageName");
+
 
 setInterval(function() {
 var BRZ ={
@@ -263,6 +263,8 @@ box-sizing:bordered-box;
 justify-content:center;
 trasition:1s;
 font-family:Poppins;
+font-weight:bold;
+background-color:#FFFFF;
 }
 input{
 border:none;
@@ -285,21 +287,22 @@ margin-left:1.7rem;
 
 font-size:1.2rem;
 }
+.sh{
+color:rgb(123,70,242,1);
+background-image: linear-gradient( rgb(188,161,248,0.2), rgb(255,255,255,1) );
 
+}
 .sh1{
-
-color:#FF69B4;
-background: linear-gradient(to bottom, #ffe7e7 0%, #ffffff 103%);
+color:rgb(231,71,130,1);
+background-image: linear-gradient( rgb(247,105,167,0.2), rgb(255,255,255,1) );
 }
 .sh2{
-
-color:#ceffca;
-background: linear-gradient(to bottom, #ceffca 0%, #ffffff 103%);
+color:rgb(40,194,133,1);
+background-image: linear-gradient( rgb(59,183,76,0.2), rgb(255,255,255,1) );
 }
 .sh3{
-
-color:#FFFACD;
-background: linear-gradient(to bottom, #FFFACD 0%, #ffffff 103%);
+color:rgb(255,199,66,1);
+background-image: linear-gradient( rgb(255,199,66,0.2), rgb(255,255,255,1) );
 }
 .dpurple{
 position:absolute;
@@ -337,10 +340,7 @@ height:90%;
 width:41%;
 float:left;
 }
-.sh{
-background:linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%);
 
-}
 .m{
 position:absolute ;
 z-index:1;
@@ -471,7 +471,7 @@ outline:none;
 <!--SearchBar-->
 <div>
 <div class="w3-padding w3-text-light-grey w3-margin search bar">
-<input id="myInput" class="w3-text-grey w3-light-grey w3-card w3-padding w3-round-large " type="text" placeholder="Search by Countries"/>
+<input id="myInput" class="w3-text-grey w3-light-grey w3-card w3-padding w3-round-large " type="text" placeholder="Search"/>
 <button  class=" w3-hover-blue w3-round-large sebtn w3-button w3-flat-midnight-blue">
 <i class="fa fa-search"></i>
 </button>
@@ -488,33 +488,33 @@ outline:none;
 <!--WorldInfect--><b>
 <label class="worldhead ">WORLD UPDATE</label><br>
 
-<div  class="w3 sh w3-text-deep-purple w3-padding w3-margin  w3-round-xlarge ">
+<div  class="w3 sh w3-padding w3-margin  w3-round-xlarge ">
 
-<br><label id="nadd" class="w3-card w3-small w3-text-deep-lurple w3-padding w3-round-xlarge light"><b><i class="fa fa-spinner fa-spin"></i></label>
+<br><label id="nadd" class="w3-card w3-small  w3-padding w3-round-xlarge w3-text-deep-purple light"><i class="fa fa-spinner fa-spin"></i></label>
 <img src="https://lh3.googleusercontent.com/-Poq8jRy6LlA/XsBIvJ-1fgI/AAAAAAAAAQA/W4JffLlHH54aaIfLNAJ2Bvv7Le7fbdIsgCLcBGAsYHQ/h240/business.png"/>
-<br><label id="tadd" class="ecount"><b><i class="fa fa-spinner fa-spin"><b></i></b></label>
+<br><label id="tadd" class="ecount w3-text-deep-purple"><b><i class="fa fa-spinner fa-spin"></i></b></label>
 <label class=" ecount in w3-small w3-text-grey"><b>TOTAL INFECTIONS</b></label>
 </div>
 <!--EndWorldInfect-->
 <div class="w3 sh1  w3-padding w3-margin  w3-round-xlarge ">
-<br><label id="ndeath" class="w3-card w3-small w3-padding w3-round-xlarge w3-text-red light"><b><i class="fa fa-spinner fa-spin"></i></label>
+<br><label id="ndeath" class="w3-card w3-small w3-padding w3-round-xlarge w3-text-red light"><i class="fa fa-spinner fa-spin"></i></label>
 <img src="https://lh3.googleusercontent.com/-M3IyGtvWpco/XsBMB6THVoI/AAAAAAAAAQs/MbZP5K1LxicpXgm2n6ySY_syQPh61n3HQCPcBGAYYCw/w280-h280-p/virus%2B%25281%2529.png"/>
-<br><label id="tdeath" class="w3-text-red ecount"><b><i class="fa fa-spinner fa-spin"></i></b></label>
+<br><label id="tdeath" class="ecount w3-text-red"><b><i class="fa fa-spinner fa-spin"></i></b></label>
 <label class=" ecount in w3-small w3-text-grey"><b>TOTAL DEATHS</b></label>
 </div>
 
 
 <div class="w3 sh2  w3-padding w3-margin  w3-round-xlarge ">
-<br><label id="nrecover" class="w3-card w3-small w3-padding w3-round-xlarge w3-text-green light"><i class="fa fa-spinner fa-spin"></i></label>
+<br><label id="nrecover" class="w3-card w3-text-green w3-small w3-padding w3-round-xlarge  light"><i class="fa fa-spinner fa-spin"></i></label>
 <img class="sh2i" src="https://lh3.googleusercontent.com/-rviUqtrDQX4/XsBMBkhs2qI/AAAAAAAAAQk/ytdStzmwX9kkgktJtIxIg0k5yZ0mnWQCACPcBGAYYCw/w280-h280-p/gym.png"/>
 <br><label id="trecover" class="w3-text-green ecount"><b><i class="fa fa-spinner fa-spin"></i></b></label>
 <label class=" ecount in w3-small w3-text-grey"><b>TOTAL RECOVERS</b></label>
 </div>
 
 <div class="w3  sh3  w3-padding w3-margin  w3-round-xlarge ">
-<br><label id="ncritical" class="w3-card w3-small w3-padding w3-round-xlarge y light"><b><i class="fa fa-spinner fa-spin"></i></label>
+<br><label id="ncritical" class="w3-card y w3-small w3-padding w3-round-xlarge  light"><b><i class="fa fa-spinner fa-spin"></i></label>
 <img class="sh2i" src="https://lh3.googleusercontent.com/-juAlUIS56fw/XsBMBj9UE_I/AAAAAAAAAQo/vczk0YXpqLwfUkzTS2RNMWJd9LsBT1yRQCPcBGAYYCw/w280-h280-p/timer.png"/>
-<br><label id="tcritical" class="y ecount"><b><i class="fa y fa-spinner fa-spin"></i></b></label>
+<br><label id="tcritical" class="y ecount"><b><i class="fa  fa-spinner fa-spin"></i></b></label>
 <label class=" ecount in w3-small w3-text-grey"><br>TOTAL CRITICAL</b></label>
 </div>
 </b>
@@ -622,15 +622,15 @@ $.ajax({
   for(var i=0;i<Response.length;i++){
    $('#lists').append(`
 
-    <b><ul class="w3-ul"><li class="w3-li">${Response[i].country}</li></ul>
+    <ul class="w3-ul"><li class="w3-li">${Response[i].country}</li></ul>
 
    `);
 }
 
 $("li").click(function() {
  ClickC = $(this).text();
- localStorage.setItem("storageName",ClickC);
- document.location.href = "COVID-19-TRACKER-BY-COUNTRY.htm";
+ localStorage.setItem("storageName",ClickC)
+ document.location.href = "COVID-19_BY_C.html";
 
 });
 
@@ -639,8 +639,8 @@ $("li").click(function() {
 });
 
 $(".what").click(function(){
- document.location.href = "whatsapp://send?text=https://sagarjadhavwebdev.github.io/COVID-19/"
- ;
+
+
 });
 </script>
 
