@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"> 
@@ -16,6 +17,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>COVID-19 By COUNTRY</title>
 <style type="text/css">
+
+
 body{
 margin:0px;
 height:100%;
@@ -23,7 +26,7 @@ width:100%;
 box-sizing:bordered-box;
 justify-content:center;
 trasition:1s;
-font-family:Poppins;
+font-family: Poppins;
 }
 img{
 border-radius:5rem;
@@ -72,7 +75,7 @@ margin-top:0rem !important;
 width:40%;
 height:10rem !important;
 float:left;
-background:linear-gradient(to bottom, #e6e6fa 0%, #ffffff 100%);
+
 }
 .flagt{
 
@@ -159,13 +162,16 @@ color:#FEDE00;
 margin-top:-1rem !important;
 }
 .sh{
-background: linear-gradient(to bottom, #ffe7e7 0%, #ffffff 103%);
+background-image: linear-gradient( rgb(188,161,248,0.2), rgb(255,255,255,1) );
 }
 .sh1{
-background: linear-gradient(to bottom, #ceffca 0%, #ffffff 103%);
+background-image: linear-gradient( rgb(247,105,167,0.2), rgb(255,255,255,1) );
 }
 .sh2{
-background: linear-gradient(to bottom, #FFFACD 0%, #ffffff 103%);
+background-image: linear-gradient( rgb(59,183,76,0.2), rgb(255,255,255,1) );
+}
+.sh3{
+background-image: linear-gradient( rgb(255,199,66,0.2), rgb(255,255,255,1) );
 }
 .inf{
 margin-top:-1rem !important;
@@ -198,6 +204,19 @@ display:flex;
 
 
 }
+.what2{
+    position: fixed;
+    bottom: 3em;
+    right: 2rem;
+    font-size:4rem;
+    text-decoration: none;
+    padding:0rem;
+    height:3.5rem;
+    width:3.5rem;
+    background: transparent;
+
+
+}
 
 </style>
 </head>
@@ -218,22 +237,22 @@ display:flex;
 <label class="la2 w3-small">Critical</label>
 </div>
 </b>
-<div class="w3  w3-text-deep-purple   w3-padding w3-margin  w3-round-xlarge ">
-<br><center><b>
-<i class="fas ic w3-xxxlarge fa-virus"></i><br>
+<div class="w3 sh w3-text-deep-purple   w3-padding w3-margin  w3-round-xlarge ">
+<br><center><b><i class="fas w3-xxxlarge fa-virus"></i>
 <label class=" IT w3-xlarge"><i class="fa fa-spinner fa-spin"></i></label><br>
 <label class="w3-small w3-text-grey lb">Infections</label>
 </b>
 </div>
-<div class="w3 sh w3-text-pink   w3-padding w3-margin  w3-round-xlarge ">
+<div class="w3 sh1 w3-text-pink   w3-padding w3-margin  w3-round-xlarge ">
 <br><center><b>
-<i class="fas w3-xxxlarge fa-skull-crossbones"></i><br>
+<i class="fas w3-xxxlarge fa-skull-crossbones"></i>
+<br>
 <label class=" ID w3-xlarge"><i class="fa fa-spinner fa-spin"></i></label><br>
 <label class="w3-small w3-text-grey lb">Deaths</label>
 </b>
 </div>
 
-<div class="w3 sh1 w3-text-green   w3-padding w3-margin  w3-round-xlarge ">
+<div class="w3 sh2 w3-text-green   w3-padding w3-margin  w3-round-xlarge ">
 <br><center><b>
 <i class="fas w3-xxxlarge fa-heart"></i><br>
 <label class=" IR w3-xlarge"><i class="fa fa-spinner fa-spin"></i></label><br>
@@ -241,7 +260,7 @@ display:flex;
 </b>
 </div>
 
-<div class="w3 sh2 y   w3-padding w3-margin  w3-round-xlarge ">
+<div class="w3 sh3 y   w3-padding w3-margin  w3-round-xlarge ">
 <br><center><b>
 <i class="fas w3-xxxlarge fa-heartbeat"></i><br>
 <label class=" IC w3-xlarge"><i class="fa fa-spinner fa-spin"></i></label><br>
@@ -255,34 +274,39 @@ display:flex;
 
 <div class="infected">
 
-<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<div  class="w3-margin w3-text-white w3-padding w3-card-4  w3-deep-purple w3-round-large w3-bar">
 <img align="left" class="pi" src="https://www.flaticon.com/premium-icon/icons/svg/2841/2841222.svg">
 <label class="w3-medium pt ">Handwashing is the key to preventing Coronavirus.</label>
 
 </div>
 
-<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<div  class="w3-margin w3-text-white w3-padding w3-card-4  w3-deep-purple w3-round-large w3-bar">
 <img align="left" class="pi" src="https://image.flaticon.com/icons/svg/2949/2949689.svg">
 <label class="w3-medium pt ">Maintain 2-metre distance between you and people.</label>
 
 </div>
 
-<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<div  class="w3-margin w3-text-white w3-padding w3-card-4  w3-deep-purple w3-round-large w3-bar">
 <img align="left" class="pi" src="https://image.flaticon.com/icons/svg/2949/2949699.svg">
 <label class="w3-medium pt ">Cover your mouth and nose when coughing or sneezing.</label>
 
 </div>
-<div  class="w3-margin w3-text-grey w3-padding w3-card  w3-light-grey w3-round-large w3-bar">
+<div  class="w3-margin w3-text-white w3-padding w3-card-4  w3-deep-purple w3-round-large w3-bar">
 <img align="left" class="pi" src="https://image.flaticon.com/icons/svg/2756/2756493.svg">
 <label class="w3-medium pt "> Follow Stay home Stay Safe, Stay home if you feel unwell.</label>
 
 </div>
+<center>
+<button class="w3-button w3-hover-green w3-border-white w3-card w3-round-large w3-blue" style="margin-left:3rem !important">GO BACK</button>
+</center>
+<br>
 </b></b></b></b></b></b></b></b></b></b></b>
 
 
 </div>
+
 <img class="what h w3-dark-grey w3-round-xxlarge" src="https://image.flaticon.com/icons/png/512/875/875627.png">
-<footer class="footer w3-small w3-black ">
+<footer class="footer w3-small w3-light-grey ">
 <div class=""><b><br><center>
 <label>Design by <a class="w3-text-blue" href="https://www.freebielobster.com/" target="_blank"><b style="font-size:0.9rem;">Freebielobster.com</b></a></label><br>
 <label>Code with <i class=" w3-large h w3-text-red fa fa-heartbeat"></i> By <a class="w3-text-blue" href="https://www.linkedin.com/in/sagar-jadhav-25181a1a0" target="_blank"><b style="font-size:0.9rem">Sagar.J</b></a></label>
@@ -292,7 +316,9 @@ display:flex;
 <script type="text/javascript">
 
 $( document ).ready(function() {
-let N = localStorage.getItem("storageName")
+
+let N = localStorage.getItem("storageName");
+
 let State;
 State = "https://coronavirus-19-api.herokuapp.com/countries/" + N;
 var India ={
@@ -305,11 +331,11 @@ var India ={
 
 $.ajax(India).done(function(IRes){
 console.log(JSON.stringify(IRes));
-let IT = IRes.cases;
-let ID = IRes.deaths;
-let IR = IRes.recovered;
-let IC = IRes.critical;
-let Na = IRes.country;
+let IT = IRes.cases.toLocaleString();;
+let ID = IRes.deaths.toLocaleString();;
+let IR = IRes.recovered.toLocaleString();;
+let IC = IRes.critical.toLocaleString();;
+let Na = IRes.country.toLocaleString();;
 
 
 $(".Na").text(Na);
@@ -325,7 +351,11 @@ $('.IC').text(IC);
 });
 
 $(".what").click(function(){
- document.location.href =  "whatsapp://send?text=https://sagarjadhavwebdev.github.io/COVID-19/"
+document.location.href =  "whatsapp://send?text=https://sagarjadhavwebdev.github.io/COVID-19/"
+});
+
+$("button").click(function(){
+document.location.href =  "https://sagarjadhavwebdev.github.io/COVID-19/"
 });
 </script>
 
