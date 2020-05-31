@@ -5,7 +5,7 @@ var filesToCache = [
   '/covid.css',
   '/One.png',
   '/Two.png',
-   '/Three.png',
+   '/Three.ico',
 ];
 
 /* Start the service worker and cache all of the app's content */
