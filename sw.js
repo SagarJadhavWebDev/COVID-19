@@ -2,6 +2,7 @@ var cacheName = 'hello-pwa';
 var filesToCache = [
   '/',
   '/index.html',
+  '/COVID-19-TRACKER-BY-COUNTRY.htm',
   '/Covid.css',
   '/Main.js'
 ];
