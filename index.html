@@ -7,7 +7,7 @@
   type="module"
   src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwainstall"
 ></script>
-<pwa-install></pwa-install>
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
 <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
 <!-- or -->
@@ -580,7 +580,7 @@ outline:none;
 
 </div>
 
-
+    <pwa-install showopen>Install</pwa-install>
 <img class="what h w3-large w3-dark-grey w3-round-xxlarge" src="https://image.flaticon.com/icons/png/512/875/875627.png">
 
 <footer class="footer w3-small w3-light-grey ">
@@ -647,7 +647,11 @@ document.location.href =  "whatsapp://send?text=https://sagarjadhavwebdev.github
 });
 </script>
 
-
+    <script>
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/service-worker.js");
+      }
+    </script>
 </body>
 </html>
 
