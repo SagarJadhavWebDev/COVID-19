@@ -28,11 +28,6 @@
 <script type="text/javascript">
 $( document ).ready(function() {
 
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker
-             .register('./sw.js');
-  }
-
 setInterval(function() {
 var BRZ ={
 "url":"https://coronavirus-19-api.herokuapp.com/countries/Brazil",
@@ -651,8 +646,17 @@ document.location.href =  "whatsapp://send?text=https://sagarjadhavwebdev.github
 });
 </script>
 
+<script>
 
+window.onload = () => {
+  'use strict';
 
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('./sw.js');
+  }
+}
+</script>
 </body>
 </html>
 
