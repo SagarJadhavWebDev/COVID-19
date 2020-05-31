@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+          <link rel="manifest" href="manifest.json" />
      <link rel="icon" href="One.ico" type="image/x-icon" />  
      <script
   type="module"
@@ -649,7 +650,7 @@ document.location.href =  "whatsapp://send?text=https://sagarjadhavwebdev.github
 
     <script>
       if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("/service-worker.js");
+        navigator.serviceWorker.register("/sw.js");
       }
     </script>
 </body>
