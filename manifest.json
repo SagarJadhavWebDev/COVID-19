@@ -3,12 +3,12 @@
     "name": "COVID-19 WORLD DATA TRACKER",
     "icons": [
       {
-        "src": "imgs/Two.png",
+        "src": "Two.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "imgs/One.png,
+        "src": "One.png,
         "type": "image/png",
         "sizes": "512x512"
       }
