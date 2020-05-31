@@ -1,6 +1,6 @@
 {
-    "short_name": "PWA1",
-    "name": "My PWA 1st Prototype",
+    "short_name": "COVID-19",
+    "name": "COVID-19 WORLD DATA TRACKER",
     "icons": [
       {
         "src": "/images/icons-192.png",
@@ -8,7 +8,7 @@
         "sizes": "192x192"
       },
       {
-        "src": "/images/icons-512.png",
+        "src": "https://image.flaticon.com/icons/svg/2913/2913604.svg",
         "type": "image/png",
         "sizes": "512x512"
       }
