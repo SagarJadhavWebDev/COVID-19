@@ -3,12 +3,12 @@
     "name": "COVID-19 WORLD DATA TRACKER",
     "icons": [
       {
-        "src": "https://image.flaticon.com/icons/svg/2913/2913604.svg",
+        "src": "imgs/Two.png",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "https://image.flaticon.com/icons/svg/2913/2913604.svg",
+        "src": "imgs/One.png,
         "type": "image/png",
         "sizes": "512x512"
       }
