@@ -4,12 +4,12 @@
     "icons": [
       {
         "src": "https://image.flaticon.com/icons/svg/2913/2913604.svg",
-        "type": "svg",
+        "type": "image/png",
         "sizes": "192x192"
       },
       {
         "src": "https://image.flaticon.com/icons/svg/2913/2913604.svg",
-        "type": "svg",
+        "type": "image/png",
         "sizes": "512x512"
       }
     ],
