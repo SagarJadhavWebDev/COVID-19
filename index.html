@@ -643,7 +643,13 @@ $(".what").click(function(){
 document.location.href =  "whatsapp://send?text=https://sagarjadhavwebdev.github.io/COVID-19/"
 });
 </script>
-
+<script>
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker
+           .register('/sw.js')
+           .then(function() { alert("Service Worker Registered"); });
+}
+</script>
    
 </body>
 </html>
