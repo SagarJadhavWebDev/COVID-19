@@ -8,19 +8,25 @@ var filesToCache = [
 ];
 
 /* Start the service worker and cache all of the app's content */
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open(cacheName).then(function(cache) {
-      return cache.addAll(filesToCache);
-    })
-  );
+
+// Listen for install event, set callback
+self.addEventListener('install', function(event) {
+    // Perform some task
+     alert ("install");
 });
 
-/* Serve cached content when offline */
-self.addEventListener('fetch', function(e) {
-  e.respondWith(
-    caches.match(e.request).then(function(response) {
-      return response || fetch(e.request);
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheName) {
+      return Promise.all(
+        cacheNames.filter(function(cacheNam) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+        }).map(function(cacheNam) {
+          return caches.delete(cacheNam);
+        })
+      );
     })
   );
 });
